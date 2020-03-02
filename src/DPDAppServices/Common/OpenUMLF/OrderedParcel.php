@@ -8,14 +8,14 @@ class OrderedParcel
 {
     /**
      * @var int
-     * @JMS\SerializedName("parcelId")
+     * @JMS\SerializedName("ParcelId")
      * @JMS\Type("integer")
      */
     private $parcelId;
 
     /**
      * @var string
-     * @JMS\SerializedName("waybill")
+     * @JMS\SerializedName("Waybill")
      * @JMS\Type("string")
      */
     private $waybill;

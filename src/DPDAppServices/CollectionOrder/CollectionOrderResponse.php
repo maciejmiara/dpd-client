@@ -5,6 +5,11 @@ namespace Webit\DPDClient\DPDAppServices\CollectionOrder;
 use JMS\Serializer\Annotation as JMS;
 use Webit\DPDClient\DPDAppServices\Common\OpenUMLF\OrderedPackage;
 
+/**
+ * Class CollectionOrderResponse
+ * @package Webit\DPDClient\DPDAppServices\CollectionOrder
+ * @JMS\XmlRoot("PackagesImportResponse")
+ */
 class CollectionOrderResponse implements \IteratorAggregate
 {
     /**
@@ -29,16 +34,18 @@ class CollectionOrderResponse implements \IteratorAggregate
     private $endTime;
 
     /**
-     * @var string
-     * @JMS\SerializedName("status")
-     * @JMS\Type("string")
+     * @var array
+     * @JMS\SerializedName("StatusInfo")
+     * @JMS\XmlKeyValuePairs()
+     * @JMS\Type("array<string, string>")
      */
-    private $status;
+    private $statusInfo;
 
     /**
      * @var OrderedPackage[]
-     * @JMS\SerializedName("packages")
-     * @JMS\Type("array<Webit\DPDClient\DPDServices\PackagesGeneration\OrderedPackage>")
+     * @JMS\SerializedName("Packages")
+     * @JMS\XmlList(entry="Package")
+     * @JMS\Type("array<Webit\DPDClient\DPDAppServices\Common\OpenUMLF\OrderedPackage>")
      */
     private $packages;
 
@@ -83,11 +90,16 @@ class CollectionOrderResponse implements \IteratorAggregate
     }
 
     /**
-     * @return string
+     * @return array
      */
+    public function statusInfo()
+    {
+        return $this->statusInfo;
+    }
+
     public function status()
     {
-        return $this->status;
+        return isset($this->statusInfo['Status']) ? $this->statusInfo['Status'] : '';
     }
 
     /**

@@ -8,35 +8,37 @@ class OrderedPackage
 {
     /**
      * @var int
-     * @JMS\SerializedName("packageId")
+     * @JMS\SerializedName("PackageId")
      * @JMS\Type("integer")
      */
     private $packageId;
 
     /**
      * @var string
-     * @JMS\SerializedName("reference")
+     * @JMS\SerializedName("Reference")
      * @JMS\Type("string")
      */
     private $reference;
 
     /**
      * @var OrderedParcel[]
-     * @JMS\SerializedName("parcels")
-     * @JMS\Type("array<Webit\DPDClient\DPDServices\PackagesGeneration\OrderedParcel>")
+     * @JMS\SerializedName("Parcels")
+     * @JMS\XmlList(entry="Parcel")
+     * @JMS\Type("array<Webit\DPDClient\DPDAppServices\Common\OpenUMLF\OrderedParcel>")
      */
     private $parcels;
 
     /**
-     * @var string
-     * @JMS\SerializedName("statusInfo")
-     * @JMS\Type("string")
+     * @var array
+     * @JMS\SerializedName("StatusInfo")
+     * @JMS\XmlKeyValuePairs()
+     * @JMS\Type("array<string, string>")
      */
     private $statusInfo;
 
     /**
      * @var string
-     * @JMS\SerializedName("orderNumber")
+     * @JMS\SerializedName("OrderNumber")
      * @JMS\Type("string")
      */
     private $orderNumber;
