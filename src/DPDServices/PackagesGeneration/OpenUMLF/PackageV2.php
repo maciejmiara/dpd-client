@@ -11,14 +11,14 @@ class PackageV2 extends AbstractPackage
      * @JMS\SerializedName("customer")
      * @JMS\Type("string")
      */
-    private $customer;
+    private $customer; // @todo maybe shuld not be here - not present in docs
 
     /**
      * @param Receiver $receiver
      * @param Sender $sender
      * @param PayerType $payerType
      * @param Parcel[] $parcels
-     * @param Services $services
+     * @param ServicesV2 $services
      * @param string $reference
      * @param null $customer
      * @param int $thirdPartyFID
@@ -31,7 +31,7 @@ class PackageV2 extends AbstractPackage
         Sender $sender,
         PayerType $payerType = null,
         array $parcels = array(),
-        Services $services = null,
+        ServicesV2 $services = null,
         $reference = null,
         $customer = null,
         $thirdPartyFID = null,
