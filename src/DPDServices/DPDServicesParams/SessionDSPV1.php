@@ -32,7 +32,7 @@ class SessionDSPV1
      * @param PackageDSPV1[] $packages
      * @param SessionTypeDSPEnumV1 $sessionType
      */
-    private function __construct($sessionId = null, array $packages = array(), SessionTypeDSPEnumV1 $sessionType)
+    private function __construct($sessionId = null, array $packages = array(), SessionTypeDSPEnumV1 $sessionType = null)
     {
         $this->sessionId = $sessionId;
         $this->packages = $packages;
