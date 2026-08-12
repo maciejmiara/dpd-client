@@ -14,7 +14,7 @@ class ClientFactory
     /**
      * @param SoapExecutorFactory $soapExecutorFactory
      */
-    public function __construct(SoapExecutorFactory $soapExecutorFactory = null)
+    public function __construct(?SoapExecutorFactory $soapExecutorFactory = null)
     {
         $this->soapExecutorFactory = $soapExecutorFactory ?: new SoapExecutorFactory();
     }

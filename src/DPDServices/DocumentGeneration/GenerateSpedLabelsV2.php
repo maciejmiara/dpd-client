@@ -20,7 +20,7 @@ class GenerateSpedLabelsV2 extends AbstractApi
         DPDServicesParamsV1 $DPDServicesParamsV1,
         OutputDocFormatDSPEnumV1 $outputDocFormatV1,
         OutputDocPageFormatDSPEnumV1 $outputDocPageFormatV1,
-        OutputLabelTypeEnumV2 $outputLabelTypeV2 = null,
+        ?OutputLabelTypeEnumV2 $outputLabelTypeV2 = null,
         AuthDataV1 $authDataV1
     ) {
         /** @var DocumentGenerationResponseV2 $response */

@@ -5,6 +5,7 @@ namespace Webit\DPDClient\Common\Client;
 use JMS\Serializer\EventDispatcher\EventDispatcher;
 use JMS\Serializer\EventDispatcher\Events;
 use JMS\Serializer\Handler\HandlerRegistry;
+use JMS\Serializer\GraphNavigatorInterface;
 use JMS\Serializer\SerializerBuilder;
 use Webit\DPDClient\Common\Normaliser\EnumPreSerializationHandler;
 use Webit\SoapApi\Hydrator\Serializer\Listener\ArrayEnsuringListener;
@@ -56,7 +57,7 @@ abstract class SerializerFactory
             $callable = EnumPreSerializationHandler::createCallable();
             foreach ($enums as $class) {
                 $registry->registerHandler(
-                    'serialization',
+                    GraphNavigatorInterface::DIRECTION_SERIALIZATION,
                     $class,
                     'json',
                     $callable

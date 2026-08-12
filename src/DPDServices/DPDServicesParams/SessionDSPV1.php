@@ -32,7 +32,7 @@ class SessionDSPV1
      * @param PackageDSPV1[] $packages
      * @param SessionTypeDSPEnumV1 $sessionType
      */
-    private function __construct($sessionId = null, array $packages = array(), SessionTypeDSPEnumV1 $sessionType = null)
+    private function __construct($sessionId = null, array $packages = array(), ?SessionTypeDSPEnumV1 $sessionType = null)
     {
         $this->sessionId = $sessionId;
         $this->packages = $packages;
@@ -68,7 +68,7 @@ class SessionDSPV1
      * @param SessionTypeDSPEnumV1 $sessionType
      * @return SessionDSPV1
      */
-    public static function fromSession($sessionId, SessionTypeDSPEnumV1 $sessionType = null)
+    public static function fromSession($sessionId, ?SessionTypeDSPEnumV1 $sessionType = null)
     {
         return new self($sessionId, array(), $sessionType ?: SessionTypeDSPEnumV1::domestic());
     }
@@ -78,7 +78,7 @@ class SessionDSPV1
      * @param SessionTypeDSPEnumV1 $sessionType
      * @return SessionDSPV1
      */
-    public static function fromPackages(array $packages, SessionTypeDSPEnumV1 $sessionType = null)
+    public static function fromPackages(array $packages, ?SessionTypeDSPEnumV1 $sessionType = null)
     {
         return new self(null, $packages, $sessionType ?: SessionTypeDSPEnumV1::domestic());
     }

@@ -68,7 +68,7 @@ class DpdPickupCallParamsV1
     public function __construct(
         PolicyDPPEnumV1 $policy,
         PickupAddressDSPV1 $pickupAddress,
-        ContactInfoDPPV1 $contactInfo = null,
+        ?ContactInfoDPPV1 $contactInfo = null,
         array $protocols,
         \DateTime $pickupDate,
         $pickupTimeFrom = null,

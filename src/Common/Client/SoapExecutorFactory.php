@@ -28,7 +28,7 @@ abstract class SoapExecutorFactory
         SerializerFactory $serializerFactory,
         NormaliserFactory $normalizerFactory,
         HydratorFactory $hydratorFactory,
-        SoapApiExecutorBuilder $soapApiExecutorBuilder = null
+        ?SoapApiExecutorBuilder $soapApiExecutorBuilder = null
     ) {
         $this->serializerFactory = $serializerFactory;
         $this->normalizerFactory = $normalizerFactory;

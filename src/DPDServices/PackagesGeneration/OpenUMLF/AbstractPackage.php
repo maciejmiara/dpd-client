@@ -91,9 +91,9 @@ abstract class AbstractPackage implements \IteratorAggregate
     public function __construct(
         Receiver $receiver,
         Sender $sender,
-        PayerType $payerType = null,
+        ?PayerType $payerType = null,
         array $parcels = array(),
-        Services $services = null,
+        ?Services $services = null,
         $reference = null,
         $thirdPartyFID = null,
         $ref1 = null,

@@ -140,7 +140,7 @@ class Client
      */
     public function generatePackagesNumbersV1(
         OpenUMLFV1 $openUMLF,
-        PkgNumsGenerationPolicyEnumV1 $generationPolicy = null
+        ?PkgNumsGenerationPolicyEnumV1 $generationPolicy = null
     ) {
         $generationPolicy = $generationPolicy ?: PkgNumsGenerationPolicyEnumV1::allOrNothing();
         return $this->generatePackagesNumbersV1->__invoke($openUMLF, $generationPolicy, $this->authDataV1);
@@ -154,7 +154,7 @@ class Client
      */
     public function generatePackagesNumbersV2(
         OpenUMLFV1 $openUMLF,
-        PkgNumsGenerationPolicyEnumV1 $generationPolicy = null,
+        ?PkgNumsGenerationPolicyEnumV1 $generationPolicy = null,
         $languageCode
     ) {
         $generationPolicy = $generationPolicy ?: PkgNumsGenerationPolicyEnumV1::allOrNothing();
@@ -174,7 +174,7 @@ class Client
      */
     public function generatePackagesNumbersV3(
         OpenUMLFV2 $openUMLF,
-        PkgNumsGenerationPolicyEnumV1 $generationPolicy = null,
+        ?PkgNumsGenerationPolicyEnumV1 $generationPolicy = null,
         $languageCode
     ) {
         $generationPolicy = $generationPolicy ?: PkgNumsGenerationPolicyEnumV1::allOrNothing();
@@ -194,8 +194,8 @@ class Client
      */
     public function generateSpedLabelsV1(
         DPDServicesParamsV1 $DPDServicesParamsV1,
-        OutputDocFormatDSPEnumV1 $outputDocFormatV1 = null,
-        OutputDocPageFormatDSPEnumV1 $outputDocPageFormatV1 = null
+        ?OutputDocFormatDSPEnumV1 $outputDocFormatV1 = null,
+        ?OutputDocPageFormatDSPEnumV1 $outputDocPageFormatV1 = null
     ) {
         return $this->generateSpedLabelsV1->__invoke(
             $DPDServicesParamsV1,
@@ -214,9 +214,9 @@ class Client
      */
     public function generateSpedLabelsV2(
         DPDServicesParamsV1 $DPDServicesParamsV1,
-        OutputDocFormatDSPEnumV1 $outputDocFormatV1 = null,
-        OutputDocPageFormatDSPEnumV1 $outputDocPageFormatV1 = null,
-        OutputLabelTypeEnumV2 $outputLabelTypeEnumV2 = null
+        ?OutputDocFormatDSPEnumV1 $outputDocFormatV1 = null,
+        ?OutputDocPageFormatDSPEnumV1 $outputDocPageFormatV1 = null,
+        ?OutputLabelTypeEnumV2 $outputLabelTypeEnumV2 = null
     ) {
         return $this->generateSpedLabelsV2->__invoke(
             $DPDServicesParamsV1,
@@ -235,8 +235,8 @@ class Client
      */
     public function generateProtocolV1(
         DPDServicesParamsV1 $DPDServicesParamsV1,
-        OutputDocFormatDSPEnumV1 $outputDocFormatV1 = null,
-        OutputDocPageFormatDSPEnumV1 $outputDocPageFormatV1 = null
+        ?OutputDocFormatDSPEnumV1 $outputDocFormatV1 = null,
+        ?OutputDocPageFormatDSPEnumV1 $outputDocPageFormatV1 = null
     ) {
         return $this->generateProtocolV1->__invoke(
             $DPDServicesParamsV1,

@@ -43,7 +43,7 @@ class DPDServicesParamsV1
     public function __construct(
         PolicyDSPEnumV1 $policy,
         SessionDSPV1 $session,
-        PickupAddressDSPV1 $pickupAddress = null,
+        ?PickupAddressDSPV1 $pickupAddress = null,
         $documentId = null
     ) {
         $this->policy = $policy;

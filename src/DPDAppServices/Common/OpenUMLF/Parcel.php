@@ -25,7 +25,7 @@ class Parcel
      * Size in centimeters
      * @var float|null
      * @JMS\SerializedName("SizeX")
-     * @JMS\Type("double")
+     * @JMS\Type("integer")
      */
     private $sizeX;
 
@@ -33,7 +33,7 @@ class Parcel
      * Size in centimeters
      * @var float|null
      * @JMS\SerializedName("SizeY")
-     * @JMS\Type("double")
+     * @JMS\Type("integer")
      */
     private $sizeY;
 
@@ -41,7 +41,7 @@ class Parcel
      * Size in centimeters
      * @var float|null
      * @JMS\SerializedName("SizeZ")
-     * @JMS\Type("double")
+     * @JMS\Type("integer")
      */
     private $sizeZ;
 

@@ -27,7 +27,7 @@ class DpdPickupCallParamsV3 extends AbstractDpdPickupCallParams
      */
     public function __construct(
         PickupCallOperationTypeDPPEnumV1 $operationType,
-        PickupCallUpdateModeDPPEnumV1 $updateMode = null,
+        ?PickupCallUpdateModeDPPEnumV1 $updateMode = null,
         $orderNumber,
         $checkSum,
         \DateTime $pickupDate,

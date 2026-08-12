@@ -41,19 +41,19 @@ class ServicesV2 extends Services
      * @param DpdPickup $dpdPickup
      */
     public function __construct(
-        DeclaredValue $declaredValue = null,
-        Guarantee $guarantee = null,
+        ?DeclaredValue $declaredValue = null,
+        ?Guarantee $guarantee = null,
         $cud = false,
         $dox = false,
         $rod = false,
-        Cod $cod = null,
+        ?Cod $cod = null,
         $inPers = false,
-        SelfCol $selfCol = null,
+        ?SelfCol $selfCol = null,
         $privPers = false,
         $carryIn = false,
         $duty = false,
         $pallet = false,
-        DpdPickup $dpdPickup = null
+        ?DpdPickup $dpdPickup = null
     ) {
         parent::__construct($declaredValue, $guarantee, $cud, $dox, $rod, $cod, $inPers, $selfCol, $privPers, $carryIn, $duty, $pallet);
         $this->dpdPickup = $dpdPickup ?: null;

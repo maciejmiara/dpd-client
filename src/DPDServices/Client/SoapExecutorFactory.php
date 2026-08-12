@@ -14,10 +14,10 @@ class SoapExecutorFactory extends BaseSoapExecutorFactory
      * @param SoapApiExecutorBuilder|null $soapApiExecutorBuilder
      */
     public function __construct(
-        SerializerFactory $serializerFactory = null,
-        NormaliserFactory $normalizerFactory = null,
-        HydratorFactory $hydratorFactory = null,
-        SoapApiExecutorBuilder $soapApiExecutorBuilder = null
+        ?SerializerFactory $serializerFactory = null,
+        ?NormaliserFactory $normalizerFactory = null,
+        ?HydratorFactory $hydratorFactory = null,
+        ?SoapApiExecutorBuilder $soapApiExecutorBuilder = null
     ) {
         parent::__construct(
             $serializerFactory ?: new SerializerFactory(),

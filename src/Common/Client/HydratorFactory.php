@@ -23,7 +23,7 @@ abstract class HydratorFactory
      * HydratorFactory constructor.
      * @param Dumper $dumper
      */
-    public function __construct(Dumper $dumper = null)
+    public function __construct(?Dumper $dumper = null)
     {
         $this->dumper = $dumper ?: new VoidDumper();
     }

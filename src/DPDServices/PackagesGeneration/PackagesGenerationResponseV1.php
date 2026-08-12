@@ -48,7 +48,7 @@ class PackagesGenerationResponseV1 implements \IteratorAggregate
      * @param string $status
      * @param PackagePGRV1[] $packages
      */
-    public function __construct($sessionId, $status, array $packages = array(), \DateTime $beginTime = null, \DateTime $endTime = null)
+    public function __construct($sessionId, $status, array $packages = array(), ?\DateTime $beginTime = null, ?\DateTime $endTime = null)
     {
         $this->sessionId = $sessionId;
         $this->beginTime = $beginTime;

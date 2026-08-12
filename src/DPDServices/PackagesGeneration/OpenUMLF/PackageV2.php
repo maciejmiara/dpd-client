@@ -29,9 +29,9 @@ class PackageV2 extends AbstractPackage
     public function __construct(
         Receiver $receiver,
         Sender $sender,
-        PayerType $payerType = null,
+        ?PayerType $payerType = null,
         array $parcels = array(),
-        ServicesV2 $services = null,
+        ?ServicesV2 $services = null,
         $reference = null,
         $customer = null,
         $thirdPartyFID = null,

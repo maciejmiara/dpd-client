@@ -21,7 +21,13 @@ class ExceptionsWrappingExecutor extends BaseExceptionsWrappingExecutor
             );
         }
 
-        return $this->wrapGenericError($e, $soapFunction, $input);
+        $detail = trim((string) $previous->getMessage());
+
+        return new DPDAppServicesException(
+            sprintf('Error during "%s" SOAP function execution: %s', $soapFunction, $detail !== '' ? $detail : 'SOAP fault without message'),
+            0,
+            $e
+        );
     }
 
     /**
@@ -29,8 +35,18 @@ class ExceptionsWrappingExecutor extends BaseExceptionsWrappingExecutor
      */
     protected function wrapGenericError(\Exception $e, $soapFunction, $input)
     {
+        $detail = '';
+        if ($e->getPrevious()) {
+            $detail = trim((string) $e->getPrevious()->getMessage());
+        }
+
+        $message = sprintf('Error during "%s" SOAP function execution', $soapFunction);
+        if ($detail !== '') {
+            $message .= ': ' . $detail;
+        }
+
         return new DPDAppServicesException(
-            sprintf('Error during "%s" SOAP function execution', $soapFunction),
+            $message,
             0,
             $e
         );

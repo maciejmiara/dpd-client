@@ -108,8 +108,8 @@ class Services
      * @param bool $pallet
      */
     public function __construct(
-        DeclaredValue $declaredValue = null,
-        Cod $cod = null,
+        ?DeclaredValue $declaredValue = null,
+        ?Cod $cod = null,
         $cud = false,
         $dox = false,
         $rod = false,

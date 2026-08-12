@@ -42,7 +42,7 @@ class PickupCallSimplifiedDetailsDPPV1
      */
     public function __construct(
         PickupPayerDPPV1 $pickupPayer,
-        PickupCustomerDPPV1 $pickupCustomer = null,
+        ?PickupCustomerDPPV1 $pickupCustomer = null,
         PickupSenderDPPV1 $pickupSender,
         PickupPackagesParamsDPPV1 $packagesParams
     ) {
